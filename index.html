@@ -6,6 +6,74 @@
     <title>Insurance</title>
 </head>
 <body>
-    
+    <button class="showForm">Wypełnij formularz</button>
+    <section class="noticeForms">
+        <h2>Dane ubezpieczalni</h2>
+        <form action="">
+             <label for="">Wybierz dotychczasową ubezpieczalnie:</label>
+             <select name="insuranceCompanyList" id="insuraceCompany">
+                <option value="#">Warta</option>
+                <option value="#">PZU</option>
+                <option value="#">Link4</option>
+             </select>
+             <label for="insuranceEndDate">Data zakończenia waznosci polisy: </label>
+             <input type="date" id="insuranceEndDate" name="insuranceEndDate"><br>
+             <label for="insuranceNumber">Numer polisy do wypowiedzenia:</label>
+             <input type="text" id="insuranceNumber" name="insuranceNumber"><br>
+             <label for="insuranceNoticeReason">Powód wypowiedzenia polisy:</label>
+             <select name="insuranceNoticeReason" id="insuranceNoticeReason">
+                <option value="#">Wypowiedzenie polisy zawartej w zeszłym roku (podstawa art.28)</option>
+                <option value="#">Zakup pojazdu wraz z polisą którą chcę wypowiedzieć (podstawa art.31)</option>
+                <option value="#">Polisa przedłuzyła się automatycznie, a ja juz wykupiłem ubezpieczenie w innym towarzystwie ubezpieczeniowym (podstawa art.28a)</option>
+             </select>
+        </form>
+        <h2>Dane samochodu</h2>
+        <form action="">
+            <div>
+            <label for="carType">Rodzaj pojazdu:</label>
+                <input type="radio" name="carTypeRadioStd" id="carTypeRadioStd"><label for="carTypeRadioStd">Samochód osobowy, dostawczy do 3,5t</label>
+                <input type="radio" name="carTypeRadioOther" id="carTypeRadioOther"><label for="carTypeRadioOther">Inny - motocykl, cięzarowy, przyczepka</label>
+            </div>
+            <label for="carProductionYear">Rok produkcji:</label>
+            <select name="carProductionYear" id="carProductionYear">
+                <option value="#">2023</option>                
+            </select>
+            <label for="carBrand">Marka pojazdu</label>
+            <select name="carBrand" id="carBrand">
+                <option value="#">Peugeot</option>
+            </select>
+            <label for="carModel">Model/Typ pojazdu</label>
+            <select name="carModel" id="carModel">
+                <option value="#">308</option>
+            </select>
+            <label for="carPlateNumber">Numer rejestracyjny:</label>
+            <input type="text" id="carPlateNumber" name="carPlateNumber"><br>
+        </form>
+        <h2>Dane osobowe:</h2>
+        <form action="">
+            <label for="personName">Imię:</label>
+            <input type="text" id="personName" name="personName">
+            <label for="personLastname">Nazwisko:</label>
+            <input type="text" id="personLastname" name="personLastname">
+
+            <label for="personStreet">Ulica:</label>
+            <input type="text" id="personStreet" name="personStreet">
+
+            <label for="personHomeNo">Numer domu/mieszkania:</label>
+            <input type="" id="personHomeNo" name="personHomeNo">
+
+            <!--to do: zip code-->
+            <label for="personPostcode">Kod pocztowy:</label>
+            <input type="number" id="personPostcode" name="personPostcode" pattern="[0-9]{5}">
+
+            <label for="personCity">Miasto:</label>
+            <input type="text" id="personCity" name="personCity">
+
+            <!--to do: ograniczenie do 9 cyfr-->
+            <label for="personPhone">Numer telefonu:</label>
+            <input type="number" id="personPhone" name="personPhone">
+        </form>
+        <button class="sendForm">Wygeneruj wypowiedzenie</button>
+    </section>
 </body>
 </html>
